@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">8 Queens</string>
+    <string name="generate_btn">Generate</string>
+    <string name="bishop">Bishop</string>
+    <string name="king">King</string>
+    <string name="knight">Knight</string>
+    <string name="pawn">Pawn</string>
+    <string name="rook">Rook</string>
+    <string name="queen">Queen</string>
+</resources>

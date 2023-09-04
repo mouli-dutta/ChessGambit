@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dropdown_items">
+        <item> Bishop </item>
+        <item> King </item>
+        <item> Knight </item>
+        <item> Pawn </item>
+        <item> Queen </item>
+        <item> Rook </item>
+    </string-array>
+</resources>
