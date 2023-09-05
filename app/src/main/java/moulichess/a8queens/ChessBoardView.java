@@ -11,8 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
 public class ChessBoardView extends View {
-    private static final int NUM_ROWS = 8;
-    private static final int NUM_COLS = 8;
+    private static final int boardSize = 8;
 
     private final Paint darkTilePaint = new Paint();
     private final Paint lightTilePaint = new Paint();
@@ -48,10 +47,10 @@ public class ChessBoardView extends View {
     }
 
     private void drawChessPiece(Canvas canvas, int width) {
-        int tileSize = width / NUM_COLS;
+        int tileSize = width / boardSize;
 
-        for(int row = 0; row < NUM_ROWS; ++row) {
-            for (int col = 0; col < NUM_COLS; ++col) {
+        for(int row = 0; row < boardSize; ++row) {
+            for (int col = 0; col < boardSize; ++col) {
                 if (piecePositions[row][col] == 1) {
                     if (pieceImageResource != 0) {
                         Drawable pieceDrawable = ContextCompat.getDrawable(getContext(), pieceImageResource);
@@ -70,10 +69,10 @@ public class ChessBoardView extends View {
     }
 
     private void drawBoard(Canvas canvas, int width) {
-        int tileSize = width / NUM_COLS;
+        int tileSize = width / boardSize;
 
-        for(int row = 0; row < NUM_ROWS; ++row) {
-            for (int col = 0; col < NUM_COLS; ++col) {
+        for(int row = 0; row < boardSize; ++row) {
+            for (int col = 0; col < boardSize; ++col) {
                 if (((row + col) & 1) == 0) {
                     // Even rows and even columns
                     canvas.drawRect(col * tileSize, row * tileSize, (col+1) * tileSize, (row+1) * tileSize, lightTilePaint);

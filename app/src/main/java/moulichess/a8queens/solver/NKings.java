@@ -8,7 +8,7 @@ public class NKings extends ChessSolver {
     }
 
     @Override
-    protected boolean isValid(int[][] board, int row, int col) {
+    protected boolean isSafe(int[][] board, int row, int col) {
         // Check if there's another king in the same row
         for (int i = 0; i < board.length; i++) {
             if (board[row][i] == 1) {
@@ -24,13 +24,13 @@ public class NKings extends ChessSolver {
         }
 
         // Check if there's another king in any of the eight adjacent cells
-        int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 };
-        int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
+        final int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 };
+        final int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
 
         for (int i = 0; i < 8; i++) {
             int newRow = row + dx[i];
             int newCol = col + dy[i];
-            if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n && board[newRow][newCol] == 1) {
+            if (isValid(newRow, newCol) && board[newRow][newCol] == 1) {
                 return false; // There's another king in an adjacent cell
             }
         }

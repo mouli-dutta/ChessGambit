@@ -8,7 +8,7 @@ public class NQueens extends ChessSolver {
     }
 
     @Override
-    protected boolean isValid(int[][] board, int row, int col) {
+    protected boolean isSafe(int[][] board, int row, int col) {
         // Check the same column in previous rows
         for (int i = 0; i < row; i++) {
             if (board[i][col] == 1) {

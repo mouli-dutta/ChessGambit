@@ -7,4 +7,6 @@
     <string name="pawn">Pawn</string>
     <string name="rook">Rook</string>
     <string name="queen">Queen</string>
+    <string name="symbol_of_chess_piece">symbol of chess piece</string>
+    <string name="enter_board_size">Enter Board Size</string>
 </resources>

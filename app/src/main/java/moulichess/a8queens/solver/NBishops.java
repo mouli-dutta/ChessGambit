@@ -8,7 +8,7 @@ public class NBishops extends ChessSolver {
     }
 
     @Override
-    protected boolean isValid(int[][] board, int row, int col) {
+    protected boolean isSafe(int[][] board, int row, int col) {
         // check main diagonal
         int r = row-1, c = col-1;
         while(r >= 0 && c >= 0)
